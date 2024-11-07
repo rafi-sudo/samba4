@@ -8,7 +8,7 @@ apt install samba -y
 </pre>
 buat dengan -y supaya terunduh dengan daftar depedencys yang diperlukan samba seperti `samba-common, libacl1, libattr, libcups, libssl-dev, samba-libs, samba-utils, libjson, perl`
 
-3. Buat folder yang ingin di jadikan tempat naruh file share samba, jikalau pengen di hdd eksternal/ storage selain sistem root sendiri, harus bikin mount poin terlebih dahulu di `sudo cat /etc/fstab` atau seperti contoh konfigurasi fstab seperit di server saya [ini](https://github.com/rafisudo/samba4/blob/639aab897587c89c3830a19bb23f3e957f690888/fstab) , dengan pertama bikin folder di direktori `/mnt` `sudo mkdir -p /mnt/samples` lalu konfigurasi di fstab, sesuai dengan nama UUID dan nama partisi (jikalau sudah dipartisi) storage eskternal kalian, lalu buatlah folder untuk samba di direktori tadi seprti `sudo mkdir -p /mnt/samples/samba`
+3. Buat folder yang ingin di jadikan tempat naruh file share samba, jikalau pengen di hdd eksternal/ storage selain sistem root sendiri, harus bikin mount poin terlebih dahulu di `sudo cat /etc/fstab` atau seperti contoh konfigurasi fstab seperit di server saya [ini](https://github.com/rafi-sudo/samba4/blob/639aab897587c89c3830a19bb23f3e957f690888/fstab) , dengan pertama bikin folder di direktori `/mnt` `sudo mkdir -p /mnt/samples` lalu konfigurasi di fstab, sesuai dengan nama UUID dan nama partisi (jikalau sudah dipartisi) storage eskternal kalian, lalu buatlah folder untuk samba di direktori tadi seprti `sudo mkdir -p /mnt/samples/samba`
 4. lalu berikan hak ases ke user nobody / nogroup supaya bisa diakses semua PC/hape , serta izin penulisan seperti ini : 
 ![](https://github.com/rafi-sudo/samba4/blob/main/Screenshot_2024-11-07_06-58-49.png)
 
